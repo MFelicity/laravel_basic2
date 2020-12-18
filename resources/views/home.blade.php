@@ -1,16 +1,20 @@
-<!doctype html>
-<html lang="en">
+@extends('todos.layout')
 
-<head>
+@section('content')
+<div class ='container'>
+   <div class="row justify-content-center">
+      <div class="col-md-8">
+         <div class="card">
+           <div class="card">
+              <div class="card-header">Dashboard</div>
 
-   <meta charset="utf-8">
-   <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+              <div class="card-body">
+               @if (session ('status'))
+               <div class="alert alert-success" role="alert">
+                   {{session ('status')}}
+               </div> 
+               @endif    
+         
 
+              You are logged in!
 
-<title>Home</title>
-</head>
-<body>
-<h1>This is the home page</h1>
-<!--<p>This is an example of a basic HTML page.</p>-->
-</body>
-</html>
